@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Thread Affair</title>
+
+</head>
+
+<body class="homepage">
+  <header class="header container">
+    <%= require('html-loader!./html/header.html')%>
+  </header>
+
+  <main class="main">
+    <header class="banner-main">
+      <%= require('html-loader!./html/homepage/glide.html')%>
+      <%= require('html-loader!./html/homepage/carousel.html')%>
+    </header>
+
+    <main class="content-main">
+      <section class="catalog-preview container">
+        <header>
+          <h1>All time <span>bestsellers</span></h1>
+
+          <p>
+            Accomplish new achievements with a bold new style
+            from the brilliant collection of men’s designer suits. <br>
+            For the finest custom tailored experience, be sure to explore our selection of
+            premium fabrics from one of the world's oldest fabric mills, Vitale Barberis Canonico.
+          </p>
+        </header>
+
+        <main class="product-tiles">
+          <%= require('html-loader!./html/homepage/catalog-preview-01.html')%>
+        </main>
+
+        <footer>
+          <a
+            href=""
+            title="See more"
+            class="catalog-cta"
+          >see more</a>
+        </footer>
+      </section>
+      <!-- /.catalog-preview -->
+
+      <section class="catalog-preview container">
+        <header>
+          <h1>All time <span>bestsellers</span></h1>
+
+          <p>
+            Accomplish new achievements with a bold new style
+            from the brilliant collection of men’s designer suits. <br>
+            For the finest custom tailored experience, be sure to explore our selection of
+            premium fabrics from one of the world's oldest fabric mills, Vitale Barberis Canonico.
+          </p>
+        </header>
+
+        <main class="product-tiles">
+          <%= require('html-loader!./html/homepage/catalog-preview-02.html')%>
+        </main>
+
+        <footer>
+          <a
+            href=""
+            title="See more"
+            class="catalog-cta"
+          >see more</a>
+        </footer>
+      </section>
+      <!-- /.catalog-preview -->
+
+      <%= require('html-loader!./html/homepage/newsletter.html')%>
+      <%= require('html-loader!./html/homepage/social.html')%>
+      <%= require('html-loader!./html/homepage/store-locator.html')%>
+      <%= require('html-loader!./html/homepage/payment.html')%>
+    </main>
+  </main>
+
+
+  <footer class="footer">
+    <%= require('html-loader!./html/footer.html')%>
+  </footer>
+</body>
+
+</html>

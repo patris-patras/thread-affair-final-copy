@@ -1,0 +1,111 @@
+.footer-main {
+  background-color: $misc-purple;
+  color: $gray-secondary;
+  font-size: 14px;
+
+  a {
+    color: $gray-secondary;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include media-breakpoint-up('md') {
+      display: block;
+    }
+
+    ul {
+      width: 45%;
+      margin-bottom: 32px;
+
+      @include media-breakpoint-up('md') {
+        width: auto;
+        display: inline-block;
+        margin-right: 85px;
+      }
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+
+  .footer-contact {
+    // mobile stuff
+
+    @include media-breakpoint-up('md') {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+
+  .footer-address {
+    h3 {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 300;
+
+      span {
+        font-weight: 400;
+        color: $white;
+      }
+    }
+
+    a {
+      &[href^='mailto:'] {
+        color: $brand-primary;
+        text-transform: lowercase;
+      }
+    }
+
+    @include media-breakpoint-up('md') {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer-support {
+    text-align: center;
+    font-weight: 300;
+    margin-top: 32px;
+
+    li {
+      display: inline-block;
+      margin: 0 4px;
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    // forta majora
+    i[class^='fa'] {
+      display: block;
+      font-size: 25px;
+      color: $brand-primary;
+      margin-bottom: 4px;
+    }
+
+    @include media-breakpoint-up('md') {
+      margin-right: 64px;
+    }
+  }
+}
+
+.footer-main-container {
+  padding: 25px 25px 15px 25px;
+
+  @include media-breakpoint-up('md') {
+    padding: {
+      right: 12px;
+      left: 12px;
+    }
+  }
+}

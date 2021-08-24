@@ -1,0 +1,48 @@
+.header {
+  margin-top: 35px;
+
+  .header-controls {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+
+    ul {
+      &:first-of-type {
+        li {
+          &:nth-child(1) {
+            a {
+              color: $brand-primary;
+            }
+          }
+        }
+      }
+    }
+
+    li {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 8px;
+      }
+    }
+
+    a {
+      color: $black;
+    }
+  }
+
+  .header-logo {
+    display: block;
+    width: 120px;
+    margin: -70px auto 0 auto;
+
+    @include media-breakpoint-up('md') {
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

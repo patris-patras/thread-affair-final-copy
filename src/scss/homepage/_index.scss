@@ -1,0 +1,71 @@
+@import './banner-main';
+@import './catalog-preview';
+@import './home-newsletter';
+@import './home-social';
+@import './home-store-locator';
+@import './home-payment';
+
+.homepage {
+  .content-main {
+    margin-top: 60px;
+
+    header {
+      text-align: center;
+
+      h1 {
+        color: $brand-primary;
+        font-weight: 300;
+        text-transform: capitalize;
+        font-size: 35px;
+
+        @include media-breakpoint-up('md') {
+          font-size: 30px;
+          color: $black;
+        }
+
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+
+    section {
+      margin-bottom: 70px;
+    }
+
+    .catalog-preview {
+      & > footer {
+        display: none;
+      }
+
+      &:nth-of-type(2) {
+        & > header {
+          display: none;
+
+          @include media-breakpoint-up('md') {
+            display: block;
+          }
+        }
+
+        .product-tile {
+          &:first-child {
+            display: block;
+          }
+
+          display: none;
+
+          @include media-breakpoint-up('md') {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .product-tiles {
+      @include media-breakpoint-up('md') {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

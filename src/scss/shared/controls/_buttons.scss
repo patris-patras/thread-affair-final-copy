@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  padding: 13px 35px;
+  background-color: $brand-primary;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: color 0.2s linear, background-color 0.2s linear;
+
+  &:hover {
+    color: $white;
+  }
+
+  @include media-breakpoint-up('md') {
+    border: 1px solid $brand-primary;
+    background-color: transparent;
+    color: $brand-primary;
+
+    &:hover {
+      background-color: $brand-primary;
+    }
+  }
+}
+
+.button-large {
+  padding: 18px 40px;
+}

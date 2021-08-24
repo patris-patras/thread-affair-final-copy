@@ -1,0 +1,31 @@
+// font-awesome
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+// fonts
+@import './fonts';
+
+// bootstrap
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/bootstrap-utilities';
+
+// glide js
+@import '~@glidejs/glide/src/assets/sass/glide.core';
+@import '~@glidejs/glide/src/assets/sass/glide.theme';
+
+// common
+@import './reset';
+@import './variables';
+
+body {
+  font-family: 'Roboto', 'sans-serif';
+  color: $gray-primary;
+}
+
+@import './shared/index';
+@import './catalog/index';
+@import './homepage/index';

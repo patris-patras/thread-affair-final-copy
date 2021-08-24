@@ -1,0 +1,25 @@
+.badge {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $brand-primary;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  line-height: 20px;
+  color: $white;
+}
+
+// BEM preview:
+.badge--text-lg {
+  font-size: 24px;
+}
+
+// acceptate:
+// badge--blue
+// badge--secondary
+.badge--bg-secondary {
+  background-color: $brand-secondary;
+}
