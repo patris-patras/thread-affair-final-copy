@@ -1,5 +1,5 @@
 {
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 0,
   "editor.renderWhitespace": "all",
   "files.trimTrailingWhitespace": true,
   "editor.tabSize": 2,
@@ -28,7 +28,6 @@
   "liveServer.settings.donotVerifyTags": true,
   "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
   "launch": {
-
     "configurations": [],
     "compounds": []
   },
@@ -38,4 +37,3 @@
   "json.schemas": [],
   "javascript.updateImportsOnFileMove.enabled": "always"
 }
-

@@ -8,7 +8,20 @@
     content="width=device-width, initial-scale=1.0"
   >
   <title>Thread Affair</title>
-
+  <script src="https://www.gstatic.com/external_hosted/handlebars/v4.7.6/handlebars.min.js"></script>
+  <script
+    id="locator-result-items-tmpl"
+    type="text/x-handlebars-template"
+  >
+    {{#each locations}}
+      <li class="location-result" data-location-index="{{index}}">
+        <button class="select-location">
+          <h2 class="name">{{title}}</h2>
+        </button>
+        <div class="address">{{address1}}<br>{{address2}}</div>
+      </li>
+    {{/each}}
+  </script>
 </head>
 
 <body class="homepage">
@@ -19,7 +32,7 @@
   <main class="main">
     <header class="banner-main">
       <%= require('html-loader!./html/homepage/glide.html')%>
-      <%= require('html-loader!./html/homepage/carousel.html')%>
+      <!-- <%= require('html-loader!./html/homepage/carousel.html')%> -->
     </header>
 
     <main class="content-main">
@@ -81,7 +94,6 @@
       <%= require('html-loader!./html/homepage/payment.html')%>
     </main>
   </main>
-
 
   <footer class="footer">
     <%= require('html-loader!./html/footer.html')%>
