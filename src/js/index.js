@@ -1,5 +1,7 @@
 import Glide from '@glidejs/glide';
 import './../scss/index.scss';
+import { init, send } from 'emailjs-com';
+init('user_1Tg0LGrhPHu9gtvjP1siV');
 
 // Next.js
 // Nuxt.js
@@ -153,8 +155,25 @@ function LocatorPlus(configuration) {
   locator.renderResultsList();
 }
 
+// my code - G maps
 const googleScriptUri = `https://maps.googleapis.com/maps/api/js?key=${CONFIGURATION.mapsApiKey}&callback=initMap&libraries=places&channel=GMPSB_locatorplus_v4_c`;
 const script = document.createElement('script');
 script.src = googleScriptUri;
 script.async = true;
 document.body.append(script);
+
+// my code - emailjs
+const newsletterForm = document.querySelector('.home-newsletter form');
+newsletterForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const emailField = event.currentTarget.querySelector('#email');
+  const value = emailField.value; // in jQuery => val()
+
+  if (value.trim().length < 1) {
+    return;
+  }
+
+  send('pixellab-pp', 'template_mistjsq').then(() => {
+    event.currentTarget.remove(); // scoatem form din DOM dupa ce a fost trimis
+  });
+});

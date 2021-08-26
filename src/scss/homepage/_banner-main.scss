@@ -1,6 +1,7 @@
 .banner-main {
   background: url('../images/banners/banner-01.jpg') no-repeat center center;
   background-size: cover;
+  overflow: hidden;
 
   .banner-main-container {
     position: relative;
